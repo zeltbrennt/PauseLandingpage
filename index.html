@@ -7,6 +7,13 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/beercss@3.7.10/dist/cdn/beer.min.css" rel="stylesheet">
     <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.7.10/dist/cdn/beer.min.js"></script>
+    <style>
+        @media (max-width: 500pt) {
+            .hide-on-small {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body onload="ui('mode', 'light')">
@@ -14,22 +21,22 @@
     <nav class="tabbed small margin">
         <a href="./index.html">
             <i>home</i>
-            <div>Home</div>
+            <div class="hide-on-small">Home</div>
         </a>
         <a href="./gallarie.html">
             <i>image</i>
-            <div>Gallarie</div>
+            <div class="hide-on-small">Gallarie</div>
         </a>
         <a href="mailto:test@example.com">
             <i>mail</i>
-            <div>Kontakt</div>
+            <div class="hide-on-small">Kontakt</div>
         </a>
         <a onclick="(() => {
             navigator.clipboard.writeText(window.location.href);
             ui('#overlay');
         })()">
             <i>share</i>
-            <div>Teilen</div>
+            <div class="hide-on-small">Teilen</div>
         </a>
     </nav>
 
@@ -43,9 +50,8 @@
 
     <div class="small-space"></div>
     <main class="responsive">
-
         <div class="responsive center-align">
-            <img src="./assets/Pause_Banner.png">
+            <img class="responsive" src="./assets/Pause_Banner.png" style="max-width: 500pt; max-height: 100%;">
         </div>
 
         <article class="no-padding">

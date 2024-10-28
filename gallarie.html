@@ -14,6 +14,12 @@
             height: 100%;
             object-fit: cover;
         }
+
+        @media (max-width: 500pt) {
+            .hide-on-small {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -22,22 +28,22 @@
     <nav class="tabbed small margin">
         <a href="./index.html">
             <i>home</i>
-            <div>Home</div>
+            <div class="hide-on-small">Home</div>
         </a>
         <a href="./gallarie.html">
             <i>image</i>
-            <div>Gallarie</div>
+            <div class="hide-on-small">Gallarie</div>
         </a>
         <a href="mailto:test@example.com">
             <i>mail</i>
-            <div>Kontakt</div>
+            <div class="hide-on-small">Kontakt</div>
         </a>
         <a onclick="(() => {
-            navigator.clipboard.writeText(window.location.href);
-            ui('#overlay');
-        })()">
+        navigator.clipboard.writeText(window.location.href);
+        ui('#overlay');
+    })()">
             <i>share</i>
-            <div>Teilen</div>
+            <div class="hide-on-small">Teilen</div>
         </a>
     </nav>
 
