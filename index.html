@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.7.10/dist/cdn/beer.min.js"></script>
 </head>
 
-<body>
+<body onload="ui('mode', 'light')">
 
     <nav class="tabbed small margin">
         <a href="./index.html">
@@ -24,11 +24,21 @@
             <i>mail</i>
             <div>Kontakt</div>
         </a>
-        <a>
+        <a onclick="(() => {
+            navigator.clipboard.writeText(window.location.href);
+            ui('#overlay');
+        })()">
             <i>share</i>
-            <div>share</div>
+            <div>Teilen</div>
         </a>
     </nav>
+
+    <dialog id="overlay">
+        <h5>Link kopiert</h5>
+        <nav class="right-align no-space">
+            <button class="transparent link" onclick="ui('#overlay')">OK</button>
+        </nav>
+    </dialog>
 
 
     <div class="small-space"></div>
@@ -37,7 +47,6 @@
         <div class="responsive center-align">
             <img src="./assets/Pause_Banner.png">
         </div>
-
 
         <article class="no-padding">
             <img class="responsive extra" src="./assets/team.png">
@@ -59,7 +68,8 @@
             </h3>
         </div>
 
-        <article>
+        <article class="no-padding">
+            <img class="responsive extra" src="./assets/teller.png">
             <div class="padding">
                 <h5>Kantine in DNT</h5>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
@@ -72,7 +82,8 @@
             </div>
         </article>
 
-        <article>
+        <article class="no-padding">
+            <img class="responsive extra" src="./assets/catering.png">
             <div class="padding">
                 <h5>Catering</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -84,8 +95,10 @@
             </div>
         </article>
 
-        <article>
+        <article class="no-padding">
             <div class="padding">
+
+                <img class="responsive medium" src="./assets/Pause_Logo_transparent.png" <div class="padding">
                 <h5>Bestellservice für Mitarbeiter</h5>
                 <p>coming soon...</p>
 

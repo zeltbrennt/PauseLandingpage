@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
     </style>
 </head>
 
-<body>
+<body onload="ui('mode', 'light')">
 
     <nav class="tabbed small margin">
         <a href="./index.html">
@@ -32,9 +32,12 @@
             <i>mail</i>
             <div>Kontakt</div>
         </a>
-        <a>
+        <a onclick="(() => {
+            navigator.clipboard.writeText(window.location.href);
+            ui('#overlay');
+        })()">
             <i>share</i>
-            <div>share</div>
+            <div>Teilen</div>
         </a>
     </nav>
 
@@ -50,8 +53,15 @@
             <div class="s12 m6 l3 "><img class="square-img" src="./assets/loeffel.png"></div>
             <div class="s12 m6 l3 "><img class="square-img" src="./assets/gemüse.png"></div>
             <div class="s12 m6 l3 "><img class="square-img" src="./assets/kartoffeln.png"></div>
-            <div class="s12 m6 l3 "><img class="square-img" src="./assets/teller.png"></div>
+            <div class="s12 m6 l3 "><img class="square-img" src="./assets/zwiebel.png"></div>
             <div class="s12 m6 l3 "><img class="square-img" src="./assets/zucchini.png"></div>
+            <div class="s12 m6 l3 "><img class="square-img" src="./assets/aubergine.png"></div>
+            <div class="s12 m6 l3 "><img class="square-img" src="./assets/fritten.png"></div>
+            <div class="s12 m6 l3 "><img class="square-img" src="./assets/mais.png"></div>
+            <div class="s12 m6 l3 "><img class="square-img" src="./assets/zucchini2.png"></div>
+            <div class="s12 m6 l3 "><img class="square-img" src="./assets/blumenkohl.png"></div>
+            <div class="s12 m6 l3 "><img class="square-img" src="./assets/pilze.png"></div>
+            <div class="s12 m6 l3 "><img class="square-img" src="./assets/gurke.png"></div>
         </div>
 
 
